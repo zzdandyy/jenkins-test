@@ -20,4 +20,12 @@ public class HelloServiceTest {
         helloService.hello();
         assertEquals(20, 20);
     }
+
+    @Test
+    public void test1() {
+        int i1 = helloService.hello1(2);
+        assertEquals(1, i1);
+        int i2 = helloService.hello1(1);
+        assertEquals(0, i2);
+    }
 }

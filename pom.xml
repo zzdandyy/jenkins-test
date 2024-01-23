@@ -58,6 +58,9 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.8</version>
+                <configuration>
+                    <destFile>target/coverage-reports/jacoco.exec</destFile>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -65,7 +68,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>report</id>
+                        <id>default-report</id>
                         <phase>prepare-package</phase>
                         <goals>
                             <goal>report</goal>

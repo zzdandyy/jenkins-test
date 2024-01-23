@@ -13,22 +13,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>jenkins-test</name>
     <description>jenkins-test</description>
-    <properties>
-        <java.version>17</java.version>
-        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-        <sonar.language>java</sonar.language>
-        <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-        <sonar.jacoco.reportPaths>target/coverage-reports/jacoco.exec</sonar.jacoco.reportPaths>
-        <sonar.exclusions>
-            **/pojo/**,
-            **/api/**,
-            **/enums/**,
-            **/client/**,
-            **/result/**,
-            **/rocketmq/**,
-            **/domain/**,
-        </sonar.exclusions>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -47,10 +31,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.8</version>
         </dependency>
     </dependencies>
 
@@ -82,17 +65,21 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.8</version>
                 <configuration>
-                    <destFile>target/coverage-reports/jacoco.exec</destFile>
+                    <!--指定生成 .exec 文件的存放位置-->
+                    <destFile>target/coverage-reports/jacoco-unit.exec</destFile>
+                    <!--Jacoco 是根据 .exec 文件生成最终的报告，所以需指定 .exec 的存放路径-->
+                    <dataFile>target/coverage-reports/jacoco-unit.exec</dataFile>
                 </configuration>
                 <executions>
                     <execution>
+                        <id>jacoco-initialize</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>default-report</id>
-                        <phase>prepare-package</phase>
+                        <id>jacoco-site</id>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>

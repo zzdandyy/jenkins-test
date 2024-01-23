@@ -1,9 +1,7 @@
 package com.example.jenkinstest.service;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
 
 public class HelloServiceTest {
 

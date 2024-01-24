@@ -19,7 +19,6 @@ public class HelloServiceTest {
     @Test
     public void testSayHello() {
         helloService.hello();
-        System.out.println(1);
         assertEquals(20, 20);
     }
 

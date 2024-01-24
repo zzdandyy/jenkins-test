@@ -25,4 +25,12 @@ public class HelloService {
         }
         return temp;
     }
+
+    public int hello3(int c) {
+        int temp = 0;
+        for (int i = 0; i < c; i++) {
+            temp += 2;
+        }
+        return temp;
+    }
 }

@@ -33,4 +33,20 @@ public class HelloService {
         }
         return temp;
     }
+
+    public int hello4(int c) {
+        int temp = 0;
+        for (int i = 0; i < c; i++) {
+            temp += 3;
+        }
+        return temp;
+    }
+
+    public int hello5(int c) {
+        int temp = 0;
+        for (int i = 0; i < c; i++) {
+            temp += 4;
+        }
+        return temp;
+    }
 }

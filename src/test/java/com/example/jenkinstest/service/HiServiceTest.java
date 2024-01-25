@@ -17,6 +17,14 @@ public class HiServiceTest {
     private HiService hiService;
 
     @Test
+    public void test1() {
+        int i1 = hiService.hi1(2);
+        assertEquals(1, i1);
+        int i2 = hiService.hi1(1);
+        assertEquals(0, i2);
+    }
+
+    @Test
     public void test2() {
         int i1 = hiService.hi2(2);
         assertEquals(1, i1);

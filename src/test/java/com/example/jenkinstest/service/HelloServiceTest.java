@@ -25,6 +25,22 @@ public class HelloServiceTest {
     }
 
     @Test
+    public void test2() {
+        int i1 = helloService.hello3(2);
+        assertEquals(4, i1);
+        int i2 = helloService.hello3(1);
+        assertEquals(2, i2);
+    }
+
+    @Test
+    public void test3() {
+        int i1 = helloService.hello5(2);
+        assertEquals(8, i1);
+        int i2 = helloService.hello5(1);
+        assertEquals(4, i2);
+    }
+
+    @Test
     public void test4() {
         int i1 = helloService.hello4(2);
         assertEquals(6, i1);

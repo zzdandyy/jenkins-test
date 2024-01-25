@@ -31,4 +31,12 @@ public class HiServiceTest {
         int i2 = hiService.hi2(1);
         assertEquals(0, i2);
     }
+
+    @Test
+    public void test3() {
+        int i1 = hiService.hi3(2);
+        assertEquals(1, i1);
+        int i2 = hiService.hi3(1);
+        assertEquals(0, i2);
+    }
 }

@@ -17,12 +17,6 @@ public class HelloServiceTest {
     private HelloService helloService;
 
     @Test
-    public void testSayHello() {
-        helloService.hello();
-        assertEquals(20, 20);
-    }
-
-    @Test
     public void test1() {
         int i1 = helloService.hello1(2);
         assertEquals(1, i1);

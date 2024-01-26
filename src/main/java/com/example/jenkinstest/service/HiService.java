@@ -32,4 +32,12 @@ public class HiService {
             return 1;
         }
     }
+
+    public int hi4(int a) {
+        if (a == 1) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
 }
